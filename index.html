@@ -9,265 +9,239 @@
 
   <style>
 
-  /* GLOBAL */
-  html{
-  scroll-behavior:smooth;
-  }
+/* GLOBAL */
+*{
+box-sizing:border-box;
+}
 
-  body{
-  margin:0;
-  font-family:"Roboto",Arial,sans-serif;
-  background:#f2f2f2;
-  }
+html{
+scroll-behavior:smooth;
+}
 
-  h1 {
-  font-family:"Oswald",sans-serif;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  }
+body{
+margin:0;
+font-family:"Roboto",Arial,sans-serif;
+background:#f2f2f2;
+}
 
-  h2{
-    font-family:"Oswald",sans-serif;
-  font-size:36px;
-  margin-bottom:20px;
-  }
+h1{
+font-family:"Oswald",sans-serif;
+letter-spacing:1px;
+text-transform:uppercase;
+font-size:clamp(28px,4vw,46px);
+}
 
-  h3{
-    font-family:"Oswald",sans-serif;
-  font-size:18px;
-  letter-spacing:1px;
-  }
+h2{
+font-family:"Oswald",sans-serif;
+font-size:clamp(26px,3vw,36px);
+margin-bottom:20px;
+}
 
-  p{
-  font-family:"Oswald",sans-serif;
-  font-size:16px;
-  line-height:1.6;
-  }
+h3{
+font-family:"Oswald",sans-serif;
+font-size:clamp(16px,2vw,20px);
+}
 
+p{
+font-size:clamp(14px,1.8vw,16px);
+line-height:1.6;
+}
 
-  /* NAVBAR */
-  .navbar{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:70px;
-  background:linear-gradient(90deg,#0038A8,#CE1126);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  z-index:1000;
-  }
+/* NAVBAR */
 
-  .nav-links{
-  display:flex;
-  gap:50px;
-  }
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:65px;
+background:linear-gradient(90deg,#0038A8,#CE1126);
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+z-index:1000;
+}
 
-  .nav-links a{
-  font-family:"Oswald",sans-serif;
-  color:white;
-  text-decoration:none;
-  font-size:18px;
-  font-weight:500;
-  letter-spacing:1.5px;
-  transition:0.2s;
-  }
+.nav-links{
+display:flex;
+gap:clamp(15px,4vw,50px);
+flex-wrap:wrap;
+justify-content:center;
+}
 
+.nav-links a{
+font-family:"Oswald",sans-serif;
+color:white;
+text-decoration:none;
+font-size:clamp(14px,2vw,18px);
+letter-spacing:1px;
+transition:.2s;
+}
 
-  .nav-links a:hover{
-  color:#ffd700;
-  }
+.nav-links a:hover{
+color:#ffd700;
+}
 
-  /* HERO */
-  #home{
-  min-height:100vh;
-  padding-top:120px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+/* HERO */
 
-  background:
-  linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
-  url("https://media.discordapp.net/attachments/1234654519749640243/1469873375093456996/image-10.png?ex=69acd641&is=69ab84c1&hm=e679fa4d400e1762c999eef07091b7b975e3136c60627d206a15811eea1c07c3&=&format=webp&quality=lossless&width=933&height=486");
+#home{
+min-height:100vh;
+padding:110px 20px 60px 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 
-  background-size:cover;
-  background-position:center;
-  }
+background:
+linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
+url("https://media.discordapp.net/attachments/1234654519749640243/1469873375093456996/image-10.png");
 
-  .hero-content{
-  max-width:900px;
-  color:white;
-  }
+background-size:cover;
+background-position:center;
+}
 
-  .hero-content h1{
-  font-size:46px;
-  font-weight:600;
-  letter-spacing:3px;
-  margin-bottom:15px;
-  }
+.hero-content{
+max-width:900px;
+color:white;
+}
 
+.title-row{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
 
-  /* SECTION GENERAL */
-  section{
-  padding:100px 20px;
-  }
+.pnp-logo{
+width:clamp(50px,8vw,70px);
+}
 
-  .content{
-  max-width:1000px;
-  margin:auto;
-  text-align:center;
-  }
+/* SECTIONS */
 
-  /* INFORMATION BOX */
-  .informationbox{
-  background:rgba(0,56,168,0.9);
-  border-radius:15px;
-  padding:35px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-  color:white;
-  }
+section{
+padding:80px 20px;
+}
 
-  .informationbox p{
-  font-size:20px;
-  line-height:1.6;
-  }
+.content{
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
 
-  /* SUBJECT SECTION */
-  #subjects{
-  background:
-      linear-gradient(rgba(0,56,168,0.75), rgba(206,17,38,0.75)),
-      url("https://media.discordapp.net/attachments/1234654519749640243/1459923680552288501/Propaganda_5.png?ex=69ace521&is=69ab93a1&hm=5d97fd7de5c507839dd2938593f315b6a9c62a85c82116159580b269afefd336&=&format=webp&quality=lossless&width=863&height=486");
-      background-size:cover;
-      background-position:center;
-      color:white;
-  }
+/* INFO BOX */
 
-  #subjects h2{
-  font-size:38px;
-  margin-bottom:30px;
-  }
+.informationbox{
+background:rgba(0,56,168,0.9);
+border-radius:15px;
+padding:clamp(20px,4vw,35px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+color:white;
+}
 
-  /* SUBJECT CARDS */
-  .subject-card-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-  margin-top:40px;
-  }
+/* SUBJECT SECTION */
 
-  .subject-card{
-  background:#ce1126;
-  border-radius:15px;
-  padding:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.4);
-  transition:0.25s;
-  }
+#subjects{
+background:
+linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
+url("https://media.discordapp.net/attachments/1234654519749640243/1459923680552288501/Propaganda_5.png");
+background-size:cover;
+background-position:center;
+color:white;
+}
 
-  .subject-card:hover{
-  transform:translateY(-6px);
-  }
+/* CARDS GRID */
 
-  .subject-card img{
-  width:40px;
-  margin-bottom:12px;
-  }
+.subject-card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+margin-top:40px;
+}
 
-  .subject-card h3{
-  margin-bottom:10px;
-  }
+/* CARD */
 
-  .subject-card p{
-  font-size:15px;
-  }
+.subject-card{
+background:#ce1126;
+border-radius:15px;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:.25s;
+text-align:center;
+}
 
-  /* ACTIVITIES */
-  #activities{
-    background:
-      linear-gradient(rgba(0,56,168,0.75), rgba(206,17,38,0.75)),
-      url("https://media.discordapp.net/attachments/1234654519749640243/1459923680896225503/Propaganda_8.png?ex=69ace521&is=69ab93a1&hm=a41fa04ecd121572f75b6cd36ee5fd737a7023c1356e3b89f1f591cb506bcb90&=&format=webp&quality=lossless&width=863&height=486"); 
-      background-size:cover;
-      background-position:center;
-      color:white;
-  }
+.subject-card:hover{
+transform:translateY(-6px);
+}
 
-  #activities ol{
-  text-align:left;
-  font-size:20px;
-  line-height:1.7;
-  padding-left:25px;
-  margin:0;
-  font-family:"Oswald",sans-serif;
-  }
+.subject-card img{
+width:clamp(35px,6vw,50px);
+margin-bottom:10px;
+max-width:100%;
+}
 
+/* ACTIVITIES */
 
-  /* CAREERS */
-  #careers{
-      background:
-      linear-gradient(rgba(0,56,168,0.75), rgba(206,17,38,0.75)),
-      url("https://media.discordapp.net/attachments/1234654519749640243/1459923681697468508/Propaganda_24.png?ex=69ace521&is=69ab93a1&hm=37cf2ce58ea90312e27540ba1fc1c7355b83b776798f3033224e949c5ab9169c&=&format=webp&quality=lossless&width=863&height=486"); /* professional office/lab image */
-      background-size:cover;
-      background-position:center;
-      color:white;
-  }
+#activities{
+background:
+linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
+url("https://media.discordapp.net/attachments/1234654519749640243/1459923680896225503/Propaganda_8.png");
 
-  #careers ul{
-  text-align:left;
-  font-size:20px;
-  line-height:1.7;
-  font-family:"Oswald",sans-serif;
-  }
+background-size:cover;
+background-position:center;
+color:white;
+}
 
-  /* RESPONSIVE */
-  @media(max-width:900px){
+#activities ol{
+text-align:left;
+font-size:clamp(16px,2vw,20px);
+line-height:1.7;
+padding-left:25px;
+margin:0;
+font-family:"Oswald",sans-serif;
+}
 
-  .subject-card-grid{
-  grid-template-columns:repeat(2,1fr);
-  }
+/* CAREERS */
 
-  .nav-links{
-  gap:25px;
-  }
+#careers{
+background:
+linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
+url("https://media.discordapp.net/attachments/1234654519749640243/1459923681697468508/Propaganda_24.png");
 
-  }
+background-size:cover;
+background-position:center;
+color:white;
+}
 
-  @media(max-width:500px){
+/* MOBILE IMPROVEMENTS */
 
-  .subject-card-grid{
-  grid-template-columns:1fr;
-  }
+@media(max-width:600px){
 
-  .nav-links{
-  gap:15px;
-  font-size:14px;
-  }
+.navbar{
+height:auto;
+padding:10px;
+}
 
-  }
+.nav-links{
+gap:12px;
+}
 
-  .title-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:20px;
-  margin-bottom:15px;
-  }
+section{
+padding:70px 15px;
+}
 
-  .pnp-logo{
-  width:70px;
-  height:auto;
-  }
+.hero-content{
+padding:0 10px;
+}
 
-  #careers .subject-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    justify-content: center; /* centers the whole grid */
-    gap: 30px;
-    margin-top: 40px;
-  }
+.subject-card{
+padding:18px;
+}
 
-  </style>
+}
+
+</style>
   </head>
 
   <body>
