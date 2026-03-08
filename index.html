@@ -95,7 +95,7 @@ text-align:center;
 
 background:
 linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
-url("https://media.discordapp.net/attachments/1234654519749640243/1469873375093456996/image-10.png");
+url("https://www.sevensharpcreatives.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4a3dae4cb7dce73177d44a8e03fea7ec6139e5d8/logo.jpg");
 
 background-size:cover;
 background-position:center;
@@ -145,7 +145,7 @@ color:white;
 #subjects{
 background:
 linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
-url("https://media.discordapp.net/attachments/1234654519749640243/1459923680552288501/Propaganda_5.png");
+url("https://www.sevensharpcreatives.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4a3dae4cb7dce73177d44a8e03fea7ec6139e5d8/logo.jpg");
 background-size:cover;
 background-position:center;
 color:white;
@@ -175,6 +175,25 @@ text-align:center;
 transform:translateY(-6px);
 }
 
+
+.subject-card h3,
+.subject-card p{
+transition:all 0.2s ease;
+}
+
+.subject-card h3:hover{
+background:#ffd700;
+color:black;
+padding:3px 6px;
+border-radius:5px;
+}
+
+.subject-card p:hover{
+background:rgba(255,255,255,0.25);
+padding:3px 6px;
+border-radius:5px;
+}
+
 .subject-card img{
 width:clamp(35px,6vw,50px);
 margin-bottom:10px;
@@ -186,7 +205,7 @@ max-width:100%;
 #activities{
 background:
 linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
-url("https://media.discordapp.net/attachments/1234654519749640243/1459923680896225503/Propaganda_8.png");
+url("https://www.sevensharpcreatives.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4a3dae4cb7dce73177d44a8e03fea7ec6139e5d8/logo.jpg");
 
 background-size:cover;
 background-position:center;
@@ -207,7 +226,7 @@ font-family:"Oswald",sans-serif;
 #careers{
 background:
 linear-gradient(rgba(0,56,168,0.75),rgba(206,17,38,0.75)),
-url("https://media.discordapp.net/attachments/1234654519749640243/1459923681697468508/Propaganda_24.png");
+url("https://www.sevensharpcreatives.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4a3dae4cb7dce73177d44a8e03fea7ec6139e5d8/logo.jpg");
 
 background-size:cover;
 background-position:center;
@@ -243,6 +262,22 @@ padding:18px;
 
 </style>
   </head>
+
+  <script>
+
+const cards = document.querySelectorAll(".subject-card");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    cards.forEach(c => c.classList.remove("active"));
+
+    card.classList.add("active");
+
+  });
+});
+
+</script>
 
   <body>
 
@@ -352,9 +387,21 @@ padding:18px;
   </div>
 
   <div class="subject-card">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Seal_of_the_Department_of_Foreign_Affairs_of_the_Philippines.svg/250px-Seal_of_the_Department_of_Foreign_Affairs_of_the_Philippines.svg.png">
+  <img src="https://tr.rbxcdn.com/180DAY-e6181a586f931646f1f774eff53dacf8/150/150/Image/Webp/noFilter">
   <h3>Department of Foreign Affairs</h3>
   <p>Manages international relations and cooperation with foreign agencies.</p>
+  </div>
+
+    <div class="subject-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Seal_of_the_Office_of_the_Vice_President_of_the_Philippines.svg">
+  <h3> Office of the Vice President </h3>
+  <p>The Official Office of the Vice President. Manages and Delegates for the Vice President </p>
+  </div>
+
+    <div class="subject-card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Seal_of_the_Office_of_the_President_of_the_Philippines.svg">
+  <h3> Office of the President </h3>
+  <p>The Official Office of the President. Manages and Delegates for the President</p>
   </div>
 
   </div>
@@ -407,7 +454,7 @@ padding:18px;
     <!-- Roblox Game -->
     <div class="subject-card">
       <img src="https://images-ext-1.discordapp.net/external/W77pUvb5d_LPwKdN8zEdhovULREKLNuZ9y0VcVJgI44/https/tr.rbxcdn.com/180DAY-c00d4afb0d56aa1583f6fd71f82b3cc6/500/280/Image/Jpeg/noFilter?format=webp&width=447&height=252" alt="Roblox Game Logo">
-      <h3><a href="https://www.roblox.com/games/yourgameid" target="_blank" style="color:white; text-decoration:none;">Roblox Game</a></h3>
+      <h3><a href="https://www.roblox.com/games/78530023744927/Philippine-National-Police" target="_blank" style="color:white; text-decoration:none;">Roblox Game</a></h3>
       <p>Play our official Roblox game and experience interactive missions.</p>
     </div>
   </div>
