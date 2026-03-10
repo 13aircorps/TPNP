@@ -273,23 +273,6 @@ padding:18px;
 
 </style>
   </head>
-
-  <script>
-
-const cards = document.querySelectorAll(".subject-card");
-
-cards.forEach(card => {
-  card.addEventListener("click", () => {
-
-    cards.forEach(c => c.classList.remove("active"));
-
-    card.classList.add("active");
-
-  });
-});
-
-</script>
-
   <body>
 
   <!-- NAVBAR -->
@@ -476,7 +459,26 @@ cards.forEach(card => {
   </section>
 
   </body>
+    
+      <script>
+
+const cards = document.querySelectorAll(".subject-card");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    cards.forEach(c => c.classList.remove("active"));
+
+    card.classList.add("active");
+
+  });
+});
+
+</script>
+
+    
   </html>
+
 
 
 
